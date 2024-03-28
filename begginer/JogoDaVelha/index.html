@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velha</title>
+</head>
+
+<style>
+    .titulo {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        text-decoration: underline;
+    }
+    #home1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+    #aside1 {
+        padding: 10px;
+        
+    }
+    .btn-start {
+        background-color: seagreen;
+        padding: 10px 30px;
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 25px;
+    }
+    .btn-start:hover, .btn-stop:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .btn-stop {
+        background-color:red;
+        padding: 10px 30px;
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 25px;
+    }
+    #board {
+        padding: 10px;  
+    }
+
+    .tabuleiro {
+        height: 390px;
+        width: 390px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-color: purple;
+        
+    }
+    #aside2 {
+        padding: 10px;
+        
+    }
+    .casa {
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: cyan;
+        font-family: sans-serif;
+        font-size: 6rem;
+    }
+    .casa:hover {
+        background-color: aquamarine;
+        color: black;
+        opacity: 0.4;
+    }
+    @media screen and (max-width: 800px) {
+        #home1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
+    @media screen and (max-width: 400px) {
+        #home1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tabuleiro {
+            height: 210px;
+            width: 210px;
+        }
+        .casa {
+            font-size: 2rem;
+        }
+        
+    }
+
+
+
+
+</style>
+
+<body>
+    <h1 class="titulo">Jogo da Velha</h1>
+    
+
+    <section id="home1">
+        <aside id="aside1">
+            <h3>Informações do Jogo:</h3>
+            <a href="">regras</a>
+            <p>Player 1: X</p>
+            <p>Player 2: O</p>
+            <p> Melhor de 3 rodadas</p>
+            <button class="btn-start" id="btn" onclick="btn()" value="0"> start </button>
+            <!-- <button class="btn-stop" onclick="purple"> purple </button>  -->
+            <!-- <button class="btn-stop" onclick="orange"> orange </button>  -->
+            <div class="cronometro">cronometroaqui</div>
+        </aside>
+        <div id="board"> 
+            <div id="start"></div>
+            <div class="tabuleiro">
+            <div class="casa" id="1" value=""></div>
+            <div class="casa" id="2" value=""></div>
+            <div class="casa" id="3" value=""></div>
+            <div class="casa" id="4" onclick=""></div>
+            <div class="casa" id="5" onclick=""></div>
+            <div class="casa" id="6" onclick=""></div>
+            <div class="casa" id="7" onclick=""></div>
+            <div class="casa" id="8" onclick=""></div>
+            <div class="casa" id="9" onclick=""></div>
+            </div>
+            <p id="jogador"> </p>
+        </div>
+        
+        
+        <aside id="aside2">
+            Pontuação/Rodadas
+        </aside>
+    </section>
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
